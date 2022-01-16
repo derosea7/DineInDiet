@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- <item
+        android:id="@+id/editItem_Purchase"
+        android:title="Edit"
+        android:icon="@drawable/ic_create_black_24dp"
+        app:showAsAction="always"
+        /> -->
+
+    <item
+        android:id="@+id/removeItem_Purchase"
+        android:title="Remove"
+        android:icon="@drawable/ic_delete_forever_white_24dp"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/clearSelection_Purchase"
+        android:title="Clear"
+        android:icon="@drawable/ic_done_white_24dp"
+        app:showAsAction="always"
+        />
+
+
+
+</menu>

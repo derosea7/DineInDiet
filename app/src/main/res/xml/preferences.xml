@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Category"
+        android:key="pref_key_storage_settings">
+        <CheckBoxPreference
+            android:key="pref_key_auto_delete"
+            android:summary="summary"
+            android:title="titlecheck"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="KEY_PREF_NAME"
+            android:summary="Name you go by"
+            android:title="User first name"
+            android:defaultValue="Sensible Dieter"/>
+        <Preference
+            android:key="pref_key_mms_delete_limit"
+            android:dependency="pref_key_auto_delete"
+            android:summary="third sum"
+            android:title="ti" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

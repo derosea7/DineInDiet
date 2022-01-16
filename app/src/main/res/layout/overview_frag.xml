@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText">
+
+     <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewBanner"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5538618854621637/4780177105"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e0e0e0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- Date table -->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="24dp"
+                        android:layout_height="20px" />
+
+                    <TextView
+                        android:id="@+id/tvOverview_HeaderDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:text="Sunday, January 2016"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ivOverview_Decrement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_chevron_left_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tvOverview_DayDisplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="112sp" />
+
+                    <ImageView
+                        android:id="@+id/ivOverview_Increment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_chevron_right_black_24dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New RadioButton"
+                            android:id="@+id/radioButton" />
+                    </RadioGroup>
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="20px"
+                        android:layout_column="3" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="1"
+                        android:id="@+id/textView" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="2"
+                        android:id="@+id/textView2" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/toolbar_dropshadow" />
+
+            <!-- begins the overview table (OvTbl) -->
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="false">
+
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border_thin_grey"
+
+                    >
+
+                    <!-- Table Title -->
+
+                    <TableRow>
+
+                        <Space
+                            android:layout_width="20dp"
+                            android:layout_height="20px"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:id="@+id/lblOvTblTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_column="1"
+                            android:alpha="0.87"
+                            android:gravity="center_vertical"
+                            android:text="Overview"
+                            android:textColor="#000000"
+
+
+                            android:textSize="20sp" />
+
+                        <ImageView
+
+                            android:id="@+id/ivOverview_Add"
+                            android:src="@drawable/ic_add_black_24dp"
+                            android:layout_column="4"
+                            android:layout_gravity="center"
+                            android:tint="#229955" />
+
+                    </TableRow>
+
+                    <!-- Header title -->
+
+                    <TableRow>
+
+                        <Space
+                            android:layout_width="24dp"
+                            android:layout_height="20px"
+                            android:layout_column="3" />
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_Intake"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="4"
+                            android:layout_gravity="center_vertical"
+                            android:text="Intake"
+                            android:textAlignment="viewEnd"
+                            android:textSize="12sp" />
+
+                        <Space
+                            android:layout_width="24dp"
+                            android:layout_height="20px"
+                            android:layout_column="5" />
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_Goal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="6"
+                            android:layout_gravity="center_vertical"
+                            android:text="Goal"
+                            android:textAlignment="viewEnd"
+
+                            android:textSize="12sp" />
+
+                        <Space
+                            android:layout_width="24dp"
+                            android:layout_height="20px"
+                            android:layout_column="7" />
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_Left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="8"
+                            android:layout_gravity="center_vertical"
+                            android:text="Left"
+                            android:textAlignment="viewEnd"
+
+                            android:textSize="12sp" />
+
+                        <Space
+                            android:layout_width="24dp"
+                            android:layout_height="20px"
+                            android:layout_column="9" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View style="@style/ConsumptionRowDivider" />
+
+                    </TableRow>
+
+                    <!-- Calories row -->
+
+                    <TableRow style="@style/ConsumptionTableRow">
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_Calories"
+                            style="@style/ConsLeadColumnContent"
+                            android:layout_column="1"
+                            android:text="Calories" />
+
+                        <TextView
+                            android:id="@+id/tvIntake_Calories"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="4"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvGoal_Calories"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="6"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvLeft_Calories"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="8"
+                            android:text="0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View style="@style/ConsumptionRowDivider" />
+
+                    </TableRow>
+
+                    <!-- Total Fat row -->
+
+                    <TableRow style="@style/ConsumptionTableRow">
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_TotalFat"
+                            style="@style/ConsLeadColumnContent"
+                            android:layout_column="1"
+                            android:text="Total Fat (g)" />
+
+                        <TextView
+                            android:id="@+id/tvIntake_TotalFat"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="4"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvGoal_TotalFat"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="6"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvLeft_TotalFat"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="8"
+                            android:text="0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View style="@style/ConsumptionRowDivider" />
+
+                    </TableRow>
+
+                    <!-- Total Carbs row -->
+
+                    <TableRow style="@style/ConsumptionTableRow">
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_TotalCarbs"
+                            style="@style/ConsLeadColumnContent"
+                            android:layout_column="1"
+                            android:text="Total Carbs (g)" />
+
+                        <TextView
+                            android:id="@+id/tvIntake_TotalCarbs"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="4"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvGoal_TotalCarbs"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="6"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvLeft_TotalCarbs"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="8"
+                            android:text="0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View style="@style/ConsumptionRowDivider" />
+
+                    </TableRow>
+
+                    <!-- Protein Row -->
+
+                    <TableRow style="@style/ConsumptionTableRow">
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_Protein"
+                            style="@style/ConsLeadColumnContent"
+                            android:layout_column="1"
+                            android:text="Protein (g)" />
+
+                        <TextView
+                            android:id="@+id/tvIntake_Protein"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="4"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvGoal_Protein"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="6"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvLeft_Protein"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="8"
+                            android:text="0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View style="@style/ConsumptionRowDivider" />
+
+                    </TableRow>
+
+                    <!-- Cost row -->
+
+                    <TableRow style="@style/ConsumptionTableRow">
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_Cost"
+                            style="@style/ConsLeadColumnContent"
+                            android:layout_column="1"
+                            android:text="Cost" />
+
+                        <TextView
+                            android:id="@+id/tvIntake_Cost"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="4"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvGoal_Cost"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="6"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvLeft_Cost"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="8"
+                            android:text="0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View style="@style/ConsumptionRowDivider" />
+
+                    </TableRow>
+
+                    <!-- Cost per Calorie Row (CPC) -->
+                    <TableRow style="@style/ConsumptionTableRow">
+
+                        <TextView
+                            android:id="@+id/lblOvTbl_CPC"
+                            style="@style/ConsLeadColumnContent"
+                            android:layout_column="1"
+                            android:text="Cost per Cal" />
+
+                        <TextView
+                            android:id="@+id/tvIntake_CPC"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="4"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvGoal_CPC"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="6"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tvLeft_CPC"
+                            style="@style/ConsBodyContent"
+                            android:layout_column="8"
+                            android:text="0" />
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

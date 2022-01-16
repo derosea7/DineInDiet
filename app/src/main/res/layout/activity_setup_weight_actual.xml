@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context="com.dooragami.dineindiet.SetupActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/img_setup_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:src="@drawable/img_progress_bar_7steps_2" />
+
+        <TextView
+            android:id="@+id/lblSetupWeight_Actual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="What is you current weight_g?"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <!-- Middle Cell -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/tvSetupWeight_ActualProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="140"
+            android:textColor="@color/colorText"
+            android:textSize="30sp" />
+
+        <SeekBar
+            android:id="@+id/sbSetupWeight_Actual"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSetupWeight_ActualProgress"
+            android:max="400"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:progress="140" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/btnConfirmSetupWeightActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_next_material"
+            android:padding="10dp"
+            android:text=">"
+
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

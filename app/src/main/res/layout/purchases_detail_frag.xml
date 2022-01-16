@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnAddPurch"
+            style="@style/buttonBarGold"
+            android:text="S a v e   p u r c h a s e" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/toolbar_dropshadow"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Food name -->
+
+            <ImageView
+                android:id="@+id/ivAddPurch_Foodname"
+                style="@style/IconDetailsForm.FoodName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_local_pizza_black_24dp" />
+
+            <EditText
+                android:id="@+id/etAddPurch_Foodname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivAddPurch_Foodname"
+                android:hint="Food name*"
+                android:inputType="textCapSentences"
+                android:singleLine="true" />
+
+            <!-- Place of Purchase -->
+
+            <ImageView
+                android:id="@+id/ivAddPurch_PlaceOfPurchase"
+                style="@style/IconDetailsForm.Place"
+                android:layout_below="@id/etAddPurch_Foodname"
+                android:src="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <EditText
+                android:id="@+id/etAddPurch_PlaceOfPurchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAddPurch_Foodname"
+                android:layout_toRightOf="@id/ivAddPurch_PlaceOfPurchase"
+                android:hint="Place purchased*"
+                android:inputType="textCapWords"
+                android:singleLine="true"/>
+
+            <!-- Date of Purchase -->
+
+            <ImageView
+                android:id="@+id/ivAddPurch_DateOfPurchase"
+                style="@style/IconDetailsForm.Date"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etAddPurch_PlaceOfPurchase"
+                android:src="@drawable/ic_event_black_24dp" />
+
+            <!-- TODO: make this open date dialog -->
+            <Button
+                android:id="@+id/etAddPurch_DateOfPurchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAddPurch_PlaceOfPurchase"
+                android:layout_toRightOf="@id/ivAddPurch_DateOfPurchase"
+                android:gravity="start|center_vertical"
+                android:text="Date purchased*"
+                android:textAlignment="gravity"
+
+                />
+
+            <!-- Cost -->
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAddPurch_DateOfPurchase">
+
+                <ImageView
+                    android:id="@+id/ivAddPurch_Cost"
+                    style="@style/IconDetailsForm.Cost"
+                    android:paddingTop="0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_attach_money_black_24dp" />
+
+                <TextView
+                    android:id="@+id/lblAddPurch_Cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/ivAddPurch_Cost"
+
+                    android:gravity="center_horizontal"
+                    android:maxWidth="60dp"
+                    android:minWidth="60dp"
+                    android:text="Cost*"
+                    android:textSize="18sp" />
+
+                <SeekBar
+                    android:id="@+id/sbAddPurch_Dollars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/lblAddPurch_Cost"
+                    android:max="15"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp" />
+
+                <SeekBar
+                    android:id="@+id/sbAddPurch_Cents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sbAddPurch_Dollars"
+                    android:layout_toRightOf="@id/lblAddPurch_Cost"
+                    android:max="100"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- Nutrtion Facts Box -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvPurch_NutrionFacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Nutrition Facts"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPurch_ServingSize"
+                style="@style/TextRegularNutritionFacts"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/tvPurch_NutrionFacts"
+                android:gravity="center_vertical"
+                android:text="Serving Size" />
+
+            <EditText
+                android:id="@+id/etPurch_ServingSize"
+                style="@style/EditTextRegularNutritionFacts"
+
+                android:layout_below="@id/tvPurch_NutrionFacts"
+                android:layout_toRightOf="@id/tvPurch_ServingSize"
+                android:hint="Serving Size*"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/tvPurch_ServingSizeUnits"
+                style="@style/TextRegularNutritionFacts"
+                android:layout_below="@id/tvPurch_NutrionFacts"
+                android:layout_toRightOf="@id/etPurch_ServingSize"
+                android:gravity="center_vertical"
+                android:text="g or oz" />
+
+            <View
+                android:id="@+id/vwPurch_ServingSizeServings"
+                style="@style/DividerBlack"
+                android:layout_below="@id/etPurch_ServingSize" />
+
+            <TextView
+                android:id="@+id/tvPurch_Servings"
+                style="@style/TextRegularNutritionFacts"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/vwPurch_ServingSizeServings"
+                android:gravity="center_vertical"
+                android:text="Servings Per Container about"
+
+                />
+
+            <EditText
+                android:id="@+id/etPurch_Servings"
+                style="@style/EditTextRegularNutritionFacts"
+                android:layout_below="@id/vwPurch_ServingSizeServings"
+                android:layout_toRightOf="@id/tvPurch_Servings"
+                android:hint="Servings*"
+                android:inputType="numberDecimal" />
+
+            <View
+                android:id="@+id/vwPurch_ServingsTotalFat"
+                style="@style/DividerBlack.Thick"
+                android:layout_below="@id/etPurch_Servings" />
+
+            <!-- Total Fat -->
+
+            <TextView
+                android:id="@+id/tvPurch_TotalFat"
+                style="@style/TextBoldNutrtionFacts"
+                android:layout_below="@+id/vwPurch_ServingsTotalFat"
+                android:gravity="center_vertical"
+                android:text="Total Fat" />
+
+            <EditText
+                android:id="@+id/etPurch_TotalFat"
+                style="@style/EditTextRegularNutritionFacts"
+                android:layout_below="@id/vwPurch_ServingsTotalFat"
+                android:layout_toRightOf="@id/tvPurch_TotalFat"
+                android:hint="Total Fat"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/TextRegularNutritionFacts"
+                android:layout_below="@id/vwPurch_ServingsTotalFat"
+                android:layout_toRightOf="@id/etPurch_TotalFat"
+                android:gravity="center_vertical"
+                android:text="g or oz" />
+
+            <View
+                android:id="@+id/vwPurch_TotalFatTotalCarbs"
+                style="@style/DividerBlack"
+                android:layout_below="@id/etPurch_TotalFat" />
+
+            <!-- Total Carbs -->
+
+            <TextView
+                android:id="@+id/tvPurch_TotalCarbs"
+                style="@style/TextBoldNutrtionFacts"
+                android:layout_alignBottom="@+id/etPurch_TotalCarbs"
+                android:layout_below="@+id/vwPurch_TotalFatTotalCarbs"
+                android:gravity="center_vertical"
+                android:text="Total Carbs" />
+
+
+            <EditText
+                android:id="@+id/etPurch_TotalCarbs"
+                style="@style/EditTextRegularNutritionFacts"
+                android:layout_below="@id/vwPurch_TotalFatTotalCarbs"
+                android:layout_toRightOf="@id/tvPurch_TotalCarbs"
+                android:hint="Total Carbs"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/TextRegularNutritionFacts"
+                android:layout_below="@id/vwPurch_TotalFatTotalCarbs"
+                android:layout_toRightOf="@id/etPurch_TotalCarbs"
+                android:gravity="center_vertical"
+                android:text="g or oz" />
+
+            <View
+                android:id="@+id/vwPurch_TotalCarbsProtein"
+                style="@style/DividerBlack"
+                android:layout_below="@id/etPurch_TotalCarbs" />
+
+            <!-- Protein -->
+
+            <TextView
+                android:id="@+id/tvPurch_Protein"
+                style="@style/TextBoldNutrtionFacts"
+                android:layout_alignBottom="@+id/etPurch_Protein"
+                android:layout_below="@+id/vwPurch_TotalCarbsProtein"
+                android:text="Protein" />
+
+            <EditText
+                android:id="@+id/etPurch_Protein"
+                style="@style/EditTextRegularNutritionFacts"
+                android:layout_below="@id/vwPurch_TotalCarbsProtein"
+                android:layout_toRightOf="@id/tvPurch_Protein"
+                android:hint="Protein"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/TextRegularNutritionFacts"
+                android:layout_below="@id/vwPurch_TotalCarbsProtein"
+                android:layout_toRightOf="@id/etPurch_Protein"
+                android:text="g or oz" />
+
+            <View
+                android:id="@+id/vwPurch_ProteinEnd"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/etPurch_Protein"
+                android:layout_marginBottom="@dimen/divider_margin"
+                android:layout_marginTop="@dimen/divider_margin"
+                android:background="@drawable/list_divider" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:padding="8dp"
+            android:text="All fields with an * must be filled out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</ScrollView>

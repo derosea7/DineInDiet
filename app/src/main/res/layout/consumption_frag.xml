@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/adViewBanner_AddCons"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnAddCons"
+            style="@style/buttonBarGold"
+            android:text="A d d   C o n s u m p t i o n"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivCons_DateDecrement"
+                style="@style/ChevronBase.Left"
+                android:src="@drawable/ic_chevron_left_black_24dp" />
+
+
+            <TextView
+                android:id="@+id/lblCons_HeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp"
+                android:text="D A T E   C O N S U M E D"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvCons_HeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblCons_HeaderDate"
+                android:layout_centerHorizontal="true"
+
+                android:paddingBottom="4dp"
+                android:text="Sunday, Jan 24, 2016"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <ImageView
+                android:id="@+id/ivCons_DateIncrement"
+                style="@style/ChevronBase.Right"
+                android:src="@drawable/ic_chevron_right_black_24dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/list_divider"
+
+            />
+
+        <ListView
+            android:id="@+id/lvCons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewBanner_AddCons"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5538618854621637/2058553103"/>
+
+</RelativeLayout>

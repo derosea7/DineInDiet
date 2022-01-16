@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+
+    <Button
+        android:id="@+id/btnSaveMyInfo"
+        style="@style/buttonBarGold"
+        android:text="S a v e   i n f o" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/toolbar_dropshadow"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/lblMyInfo_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+        <EditText
+            android:id="@+id/etMyInfo_Name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+
+            />
+
+        <TextView
+            android:id="@+id/lblMyInfo_Age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:paddingTop="8dp"
+            />
+
+        <SeekBar
+            android:id="@+id/sbMyInfo_Age"
+            style="@style/SeekBarGoals"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="85"
+            android:progress="27" />
+
+        <TextView
+            android:id="@+id/tvMyInfo_AgeProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Height -->
+
+        <TextView
+            android:id="@+id/lblMyInfo_Height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblMyInfo_Inches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Inches"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <SeekBar
+                android:id="@+id/sbMyInfo_Inches"
+                style="@style/SeekBarGoals"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="68" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMyInfo_HeightProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Gender -->
+
+        <TextView
+            android:id="@+id/lblMyInfo_Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Gender"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+        <RadioGroup
+            android:id="@+id/rgMyInfo_Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/rbMyInfo_Male">
+
+            <RadioButton
+                android:id="@+id/rbMyInfo_Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/colorSecondaryText" />
+
+            <RadioButton
+                android:id="@+id/rbMyInfo_Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textColor="@color/colorSecondaryText" />
+
+            <RadioButton
+                android:id="@+id/rbMyInfo_NoAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prefer not to answer"
+                android:textColor="@color/colorSecondaryText" />
+
+
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

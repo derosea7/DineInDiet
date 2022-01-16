@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSaveConsDetail"
+            style="@style/buttonBarGold"
+            android:text="S a v e   C o n s u m p t i o n" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/toolbar_dropshadow"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivConsDetail_DateDecrement"
+                style="@style/ChevronBase.Left"
+                android:src="@drawable/ic_chevron_left_black_24dp" />
+
+            <TextView
+                android:id="@+id/lblConsDetail_HeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp"
+                android:text="D A T E   C O N S U M E D"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvConsDetail_HeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblConsDetail_HeaderDate"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="4dp"
+                android:text="Sunday, Jan 24, 2016"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageView
+                android:id="@+id/ivConsDetail_DateIncrement"
+                style="@style/ChevronBase.Right"
+                android:src="@drawable/ic_chevron_right_black_24dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/list_divider"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <!-- Food name -->
+
+            <ImageView
+                android:id="@+id/ivAddCons_Foodname"
+                style="@style/IconDetailsForm.FoodName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_local_pizza_black_24dp" />
+
+            <Button
+                android:id="@+id/etAddCons_Foodname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivAddCons_Foodname"
+                android:gravity="start|center_vertical"
+                android:text="Tap to select a food"
+                android:textAlignment="gravity"
+
+                />
+
+            <!-- Place of Purchase -->
+
+            <ImageView
+                android:id="@+id/ivAddCons_PlaceOfPurchase"
+                style="@style/IconDetailsForm.Place"
+                android:layout_below="@id/etAddCons_Foodname"
+                android:src="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvAddCons_PlaceOfPurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/etAddCons_Foodname"
+                android:layout_toRightOf="@id/ivAddCons_PlaceOfPurchase"
+                android:gravity="center|center_horizontal"
+                android:text="Place purchased"
+                android:textSize="18sp" />
+
+            <!-- Date of Purchase -->
+
+            <ImageView
+                android:id="@+id/ivAddCons_DateOfPurchase"
+                style="@style/IconDetailsForm.Date"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/tvAddCons_PlaceOfPurchase"
+                android:src="@drawable/ic_event_black_24dp" />
+
+            <TextView
+                android:id="@+id/etAddCons_DateOfPurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/tvAddCons_PlaceOfPurchase"
+                android:layout_toRightOf="@id/ivAddCons_DateOfPurchase"
+                android:gravity="center|center_horizontal"
+                android:text="Date purchased"
+                android:textSize="18sp" />
+
+            <!-- Cost -->
+
+            <ImageView
+                android:id="@+id/ivAddCons_Cost"
+                style="@style/IconDetailsForm.Cost"
+                android:layout_below="@id/etAddCons_DateOfPurchase"
+                android:src="@drawable/ic_attach_money_black_24dp" />
+
+            <TextView
+                android:id="@+id/etAddCons_Cost"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/etAddCons_DateOfPurchase"
+                android:layout_toRightOf="@id/ivAddCons_Cost"
+                android:gravity="center|center_horizontal"
+                android:text="Cost"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <!-- Consumption Details Table -->
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp">
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_thin_grey"
+
+                >
+
+                <!-- Table Title -->
+
+                <TableRow>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20px"
+                        android:layout_column="0" />
+
+                    <TextView
+                        android:id="@+id/lblConsTblTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_column="1"
+                        android:alpha="0.87"
+                        android:gravity="center_vertical"
+                        android:text="Consumption"
+                        android:textColor="#000000"
+
+
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <!-- Header title -->
+
+                <TableRow>
+
+                    <Space
+                        android:layout_width="24dp"
+                        android:layout_height="20px"
+                        android:layout_column="3" />
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_PerServing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:layout_gravity="center_vertical"
+                        android:text="Amnt \nPer Serving"
+                        android:textSize="12sp" />
+
+                    <Space
+                        android:layout_width="24dp"
+                        android:layout_height="20px"
+                        android:layout_column="5" />
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_MyCons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="6"
+                        android:layout_gravity="center_vertical"
+                        android:text="My \nConsumption"
+
+                        android:textSize="12sp" />
+
+                    <Space
+                        android:layout_width="24dp"
+                        android:layout_height="20px"
+                        android:layout_column="7" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View style="@style/ConsumptionRowDivider" />
+
+                </TableRow>
+
+                <!-- Serving Size Row -->
+
+                <TableRow style="@style/ConsumptionTableRow">
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_ServingSize"
+                        style="@style/ConsLeadColumnContent"
+                        android:layout_column="1"
+                        android:text="Serving Size (g or oz)" />
+
+                    <TextView
+                        android:id="@+id/tvPerServ_ServingSize"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="4"
+                        android:text="0" />
+
+                    <EditText
+                        android:id="@+id/etMyCons_ServingSize"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_column="6"
+                        android:hint="ex: 1.5"
+                        android:inputType="numberDecimal"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbMyCons_ServingSize"
+                        android:layout_column="7"
+                        android:layout_gravity="center_vertical"
+                        android:checked="true" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View style="@style/ConsumptionRowDivider" />
+                </TableRow>
+
+                <!-- Servings row -->
+
+                <TableRow style="@style/ConsumptionTableRow">
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_Servings"
+                        style="@style/ConsLeadColumnContent"
+                        android:layout_column="1"
+                        android:text="Servings" />
+
+                    <TextView
+                        android:id="@+id/tvPerServ_Servings"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="4"
+                        android:text="0" />
+
+                    <EditText
+                        android:id="@+id/etMyCons_Servings"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_column="6"
+                        android:hint="ex: 2.3"
+                        android:inputType="numberDecimal"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbMyCons_Servings"
+                        android:layout_column="7"
+                        android:layout_gravity="center_vertical"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View style="@style/ConsumptionRowDivider" />
+
+                </TableRow>
+
+                <!-- Calories Row -->
+
+                <TableRow style="@style/ConsumptionTableRow">
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_Calories"
+                        style="@style/ConsLeadColumnContent"
+                        android:layout_column="1"
+                        android:text="Calories" />
+
+                    <TextView
+                        android:id="@+id/tvPerServ_Calories"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="4"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/tvMyCons_Calories"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="6"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View style="@style/ConsumptionRowDivider" />
+
+                </TableRow>
+
+                <!-- Total Fat row -->
+
+                <TableRow style="@style/ConsumptionTableRow">
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_TotalFat"
+                        style="@style/ConsLeadColumnContent"
+                        android:layout_column="1"
+                        android:text="Total Fat (g)" />
+
+                    <TextView
+                        android:id="@+id/tvPerServ_TotalFat"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="4"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/tvMyCons_TotalFat"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="6"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View style="@style/ConsumptionRowDivider" />
+
+                </TableRow>
+
+                <!-- Total Carbs row -->
+
+                <TableRow style="@style/ConsumptionTableRow">
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_TotalCarbs"
+                        style="@style/ConsLeadColumnContent"
+                        android:layout_column="1"
+                        android:text="Total Carbs (g)" />
+
+                    <TextView
+                        android:id="@+id/tvPerServ_TotalCarbs"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="4"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/tvMyCons_TotalCarbs"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="6"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View style="@style/ConsumptionRowDivider" />
+
+                </TableRow>
+
+                <!-- Protein Row -->
+
+                <TableRow style="@style/ConsumptionTableRow">
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_Protein"
+                        style="@style/ConsLeadColumnContent"
+                        android:layout_column="1"
+                        android:text="Protein (g)" />
+
+                    <TextView
+                        android:id="@+id/tvPerServ_Protein"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="4"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/tvMyCons_Protein"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="6"
+                        android:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View style="@style/ConsumptionRowDivider" />
+
+                </TableRow>
+
+                <!-- Cost row -->
+
+                <TableRow style="@style/ConsumptionTableRow">
+
+
+                    <TextView
+                        android:id="@+id/lblConsTbl_Cost"
+                        style="@style/ConsLeadColumnContent"
+                        android:layout_column="1"
+                        android:text="Cost" />
+
+                    <TextView
+                        android:id="@+id/tvPerServ_Cost"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="4"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/tvMyCons_Cost"
+                        style="@style/ConsBodyContent"
+                        android:layout_column="6"
+                        android:text="0" />
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+</ScrollView>

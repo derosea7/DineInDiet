@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/adViewBanner_AddPurch"
+        >
+
+        <Button
+            android:id="@+id/btnAddPurch"
+            style="@style/buttonBarGold"
+            android:text="A d d   P u r c h a s e" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/toolbar_dropshadow"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivPurch_DateDecrement"
+                style="@style/ChevronBase.Left"
+                android:src="@drawable/ic_chevron_left_black_24dp" />
+
+
+            <TextView
+                android:id="@+id/lblPurch_HeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp"
+                android:text="D A T E   P U R C H A S E D"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvPurch_HeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblPurch_HeaderDate"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="4dp"
+                android:text="Sunday, Jan 24, 2016"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <ImageView
+                android:id="@+id/ivPurch_DateIncrement"
+                style="@style/ChevronBase.Right"
+                android:src="@drawable/ic_chevron_right_black_24dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/list_divider"
+
+            />
+
+        <ListView
+            android:id="@+id/lvPurch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewBanner_AddPurch"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5538618854621637/9581819903"/>
+
+
+</RelativeLayout>
